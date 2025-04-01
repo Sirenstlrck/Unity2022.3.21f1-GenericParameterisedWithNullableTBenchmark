@@ -17,7 +17,12 @@ dotnet fsi .\BuildCommonLib.fsx
 ## Run
 ### Unity
 Unity benchmarks can be run via "Window -> General -> Test Runner" window.\
-You can see the results in the "Window -> General -> Performance Test Report" window.
+You can see the results in the "Window -> General -> Performance Test Report" window.\
+#### Or
+```shell
+# The result will be placed in ./Results/Unity.xml
+Unity -runTests -batchmode -forgetProjectPath -projectPath ./UnityProject/ -testResults ../Results/Unity.xml
+```
 ### BenchmarkDotNet
 ```shell
 dotnet run ./BenchmarkSuite --framework net9.0 -c Release -- --job short

@@ -1,4 +1,5 @@
 BenchmarkSuite/BenchmarkDotNet.Artifacts
+Results/Unity.xml
 
 *.swp
 *.*~
