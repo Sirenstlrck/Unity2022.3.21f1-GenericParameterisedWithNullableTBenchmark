@@ -9,10 +9,10 @@ let commonLibName = "GenericParameterisedWithNullableTBenchmark.Common"
 let configuration = "Release"
 let commonLibDir = $"./%s{commonLibName}/"  
 let buildDir = $"%s{commonLibDir}/bin/%s{configuration}/fsx_artifacts/"
-
 let unityPluginsDir = "./UnityProject/Assets/Plugins/"
 
 Directory.CreateDirectory(buildDir) |> ignore
+Directory.CreateDirectory(unityPluginsDir) |> ignore
 
 printfn $"Building project %s{commonLibDir}..."
 runCommand "dotnet" $"build \"%s{commonLibDir}\" -c \"%s{configuration}\" -o \"%s{buildDir}\"" |> printfn "%s"
